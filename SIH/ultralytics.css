@@ -1,0 +1,70 @@
+/*
+ * Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+ *
+ * Ultralytics Gradio Theme CSS
+ * Use this CSS file for consistent Ultralytics blue (#042AFF) styling across Gradio apps
+ * Compatible with Gradio 6.x
+ *
+ * Usage in app.py:
+ *   from pathlib import Path
+ *   custom_css = Path("ultralytics.css").read_text()
+ *   demo.launch(css=custom_css)
+ */
+
+/* Override Gradio CSS variables for Ultralytics blue */
+.gradio-container {
+    --slider-color: #042AFF !important;
+    --checkbox-background-color-selected: #042AFF !important;
+    --checkbox-border-color-selected: #042AFF !important;
+    --checkbox-border-color-focus: #042AFF !important;
+    --button-primary-background-fill: #042AFF !important;
+    --button-primary-background-fill-hover: #0320CC !important;
+    --button-primary-border-color: #042AFF !important;
+    --color-accent: #042AFF !important;
+    --color-accent-soft: rgba(4, 42, 255, 0.15) !important;
+}
+
+/* Slider filled track */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #042AFF var(--range_progress, 25%), var(--neutral-200, #e5e7eb) var(--range_progress, 25%)) !important;
+}
+input[type="range"]::-moz-range-progress {
+    background: #042AFF !important;
+}
+
+/* Radio and checkbox accent */
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #042AFF !important;
+}
+
+/* Tab styling - remove orange, make blue */
+button[role="tab"] {
+    border-bottom-color: transparent !important;
+}
+button[role="tab"].selected,
+button[role="tab"][aria-selected="true"] {
+    background: transparent !important;
+    color: #042AFF !important;
+    border-bottom: 2px solid #042AFF !important;
+}
+
+/* Radio group selected item: blue background, white text */
+.wrap.selected,
+label.selected {
+    background: #042AFF !important;
+    border-color: #042AFF !important;
+    color: white !important;
+}
+label.selected span {
+    color: white !important;
+}
+
+/* Primary button */
+button.primary {
+    background: #042AFF !important;
+    border-color: #042AFF !important;
+}
+button.primary:hover {
+    background: #0320CC !important;
+}
