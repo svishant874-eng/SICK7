@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Datasets
+vehicle_dataset/
+*.zip
+
+# Kaggle upload folders
+kaggle_dataset/
+kaggle_checkpoint/
+
+# Model weights
+*.pt
+*.onnx
+
+# IDE
+.vscode/
+.idea/
