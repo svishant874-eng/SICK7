@@ -1,2 +1,7 @@
 gradio
 ultralytics
+opencv-python
+numpy
+Pillow
+easyocr
+imageio-ffmpeg
